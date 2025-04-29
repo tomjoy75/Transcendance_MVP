@@ -53,7 +53,7 @@ Transcendence_MVP/
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/Transcendence_MVP.git
+git clone https://github.com/tomjoy75/Transcendence_MVP.git
 cd Transcendence_MVP
 cp backend/.env.example backend/.env  # Customize secrets
 docker-compose up --build
