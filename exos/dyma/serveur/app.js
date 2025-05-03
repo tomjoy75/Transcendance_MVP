@@ -12,9 +12,25 @@ server.on('request', (req, res) => {
 //	console.log(req);
 //	console.log('got a request'); // Fonction de callback pour lire la requete et ecrire la reponse
 	res.writeHead(200, {
-		'content-type':'text/plain'
+//		'content-type':'text/html'
+		'content-type':'application/json'
+
 	})
-	res.end('got a response');
+	const obj = {
+		key1:'value1',
+		key2:'value2'
+	}
+	// res.end(`
+	// 	<html>	
+	// 		<head>
+	// 			<title>Mon Premier Site Node</title>
+	// 		</head>
+	// 		<body>
+	// 			<h1>Hello World</h1>
+	// 		</body>
+	// 	</html>
+	// `);
+	res.end(JSON.stringify(obj));
 });
 
-server.listen(8080);
+server.listen(8081);
