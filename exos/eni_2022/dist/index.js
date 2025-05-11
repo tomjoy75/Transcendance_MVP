@@ -1,20 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const fastify_1 = __importDefault(require("fastify"));
-const app = (0, fastify_1.default)({
-    logger: true
-});
-app.get("/", async () => "Hello world");
+const server_1 = require("./core/server");
+// IIFE : declare a function and execute it immediately
 (async () => {
-    try {
-        await app.listen({ port: 3000 });
-    }
-    catch (err) {
-        app.log.error(err);
-        process.exit(1);
-    }
+    const server = new server_1.Server();
+    await server.start();
 })();
 //# sourceMappingURL=index.js.map

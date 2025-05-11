@@ -1,16 +1,7 @@
-import fastify from "fastify";
+import { Server } from "./core/server";
 
-const app = fastify({
-	logger: true
-});
-
-app.get("/", async () => "Hello world");
-
+// IIFE : declare a function and execute it immediately
 (async () => {
-	try {
-		await app.listen({ port: 3000});
-	} catch (err) {
-		app.log.error(err);
-		process.exit(1);
-	}
+	const server = new Server();
+	await server.start();
 })();

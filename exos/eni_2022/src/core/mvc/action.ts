@@ -7,6 +7,15 @@ const action = <TController extends Object>(
             target: (this: TController, ...args: any[]) => unknown,
             context: ClassMethodDecoratorContext<TController>
         ) => {
-
+            context.addInitializer(function (){
+                RouteCollection.getInstance().add({
+                    controller: this.constructor.name,
+                    action: context.name.toString(),
+                    httpVerb
+                });
+            });
         };
     }
+
+export const Get = action("get");
+export const Post = action("post");
