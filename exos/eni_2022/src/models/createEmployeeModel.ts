@@ -1,5 +1,15 @@
+/**
+ * @file createEmployeeModel.ts
+ * Décrit les propriétés attendues pour créer un employé.
+ * Utilisé avec le décorateur `@SchemaProperty` pour générer dynamiquement un schéma de validation JSON.
+ */
 import { SchemaProperty } from "../core/schema/schemaProperty";
 
+/**
+ * Classe `CreateEmployeeModel`.
+ * Modèle de données utilisé pour valider la création d’un nouvel employé.
+ * Chaque propriété est décorée pour alimenter dynamiquement le schéma JSON.
+ */
 export class CreateEmployeeModel {
 	@SchemaProperty({
 		description: `Employee's first name`,

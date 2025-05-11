@@ -1,3 +1,10 @@
+/**
+ * @file server.ts
+ * Initialise et configure le serveur Fastify.
+ * Monte dynamiquement les routes en s'appuyant sur la RouteCollection,
+ * les schémas JSON, les décorateurs de contrôleur, et les dépendances injectées.
+ * Intègre également la documentation Swagger pour l'API.
+ */
 import fastify, { FastifyInstance } from "fastify";
 import { RouteCollection } from "./mvc/routeCollection";
 import { ControllerFactory } from "./mvc/controllerFactory";
@@ -8,6 +15,10 @@ import { ModelBindings } from "./mvc/modelBindings";
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
 
+/**
+ * Classe `Server`.
+ * Point central de l’application, configure Fastify et monte dynamiquement les routes déclarées par décorateurs.
+ */
 export class Server {
 	#fastifyInstance: FastifyInstance;
 
