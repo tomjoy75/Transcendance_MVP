@@ -48,7 +48,7 @@ Route	Method	Description
 
 You can find the full flowchart (JWT + 2FA) in docs/2fa-flow.drawio or see below:
 
-###🧪 To Test
+### 🧪 To Test
 
     Login without 2FA → direct token
 
