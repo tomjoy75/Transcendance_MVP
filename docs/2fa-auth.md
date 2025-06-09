@@ -46,8 +46,6 @@ Route	Method	Description
 /2fa/disable	POST	(to be implemented)
 🖼️ Schema
 
-You can find the full flowchart (JWT + 2FA) in docs/2fa-flow.drawio or see below:
-
 ### 🧪 To Test
 
     Login without 2FA → direct token
