@@ -86,6 +86,19 @@ Access points:
 
 ---
 
+## 🔐 2FA (Two-Factor Authentication)
+
+The authentication system now supports optional **2FA (TOTP-based)** security:
+
+- Temporary JWT issued when 2FA is enabled
+- Full token sent only after verification via `/2fa/verify-login`
+- QR code provisioning via `/2fa/setup`
+- TOTP validated using apps like Google Authenticator
+
+📄 More details in [`docs/2fa-auth.md`](./docs/2fa-auth.md)
+
+---
+
 ## 📜 License
 
 This is a pedagogical project developed as part of the 42 curriculum.  
